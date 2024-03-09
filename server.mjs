@@ -1,7 +1,7 @@
 import express from "express";
 import next from "next";
 
-let port = process.env.PORT || "4000";
+let port = process.env.PORT || "3000";
 let host = process.env.HOST || "localhost";
 let env = process.env.NODE_ENV || "development";
 
