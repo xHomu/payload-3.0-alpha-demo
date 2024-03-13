@@ -6,31 +6,25 @@
   "sideEffects": false,
   "scripts": {
     "dev:express": "tsx server.mjs",
-    "dev": "NODE_OPTIONS=--no-deprecation next dev",
-    "devsafe": "rm -rf .next && NODE_OPTIONS=--no-deprecation next dev",
-    "build": "NODE_OPTIONS=--no-deprecation next build",
-    "payload": "NODE_OPTIONS=--no-deprecation payload",
-    "start": "NODE_OPTIONS=--no-deprecation next start",
-    "lint": "NODE_OPTIONS=--no-deprecation next lint"
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint"
   },
   "engines": {
     "node": ">=18.19.0"
   },
   "dependencies": {
-    "@payloadcms/db-mongodb": "3.0.0-alpha.44",
-    "@payloadcms/db-postgres": "3.0.0-alpha.44",
-    "@payloadcms/next": "3.0.0-alpha.44",
-    "@payloadcms/richtext-lexical": "3.0.0-alpha.44",
-    "@payloadcms/richtext-slate": "3.0.0-alpha.44",
-    "@remix-run/express": "^2.8.1",
-    "@remix-run/node": "^2.8.1",
-    "@remix-run/react": "^2.8.1",
-    "compression": "^1.7.4",
-    "express": "^4.18.3",
-    "isbot": "^4.1.0",
-    "morgan": "^1.10.0",
+    "@payloadcms/db-mongodb": "3.0.0-alpha.48",
+    "@payloadcms/db-postgres": "3.0.0-alpha.48",
+    "@payloadcms/next": "3.0.0-alpha.48",
+    "@payloadcms/richtext-lexical": "3.0.0-alpha.48",
+    "@payloadcms/richtext-slate": "3.0.0-alpha.48",
+    "cross-env": "^7.0.3",
     "next": "14.2.0-canary.10",
-    "payload": "3.0.0-alpha.44",
+    "payload": "3.0.0-alpha.48",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "0.32.6",
@@ -41,8 +35,6 @@
     "@types/compression": "^1.7.5",
     "@types/express": "^4.17.20",
     "@types/morgan": "^1.9.9",
-    "@types/react": "^18.2.20",
-    "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
     "cross-env": "^7.0.3",
@@ -55,7 +47,12 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "typescript": "^5.4.2",
     "vite": "^5.1.0",
-    "vite-tsconfig-paths": "^4.2.1"
+    "vite-tsconfig-paths": "^4.2.1",
+    "@types/node": "^20.11.25",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "dotenv": "^16.4.5",
+    "tsx": "^4.7.1"
   },
   "packageManager": "pnpm@8.15.4+sha256.cea6d0bdf2de3a0549582da3983c70c92ffc577ff4410cbf190817ddc35137c2"
 }
