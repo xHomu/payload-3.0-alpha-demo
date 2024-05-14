@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "devexpress": "node --watch server.cjs",
     "devsafe": "rm -rf .next && cross-env NODE_OPTIONS=--no-deprecation next dev",
     "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
@@ -25,12 +26,14 @@
     "@payloadcms/richtext-slate": "3.0.0-beta.29",
     "@payloadcms/ui": "3.0.0-beta.29",
     "cross-env": "^7.0.3",
+    "express": "^4.19.2",
     "graphql": "^16.8.1",
+    "http-proxy-middleware": "^3.0.0",
     "next": "14.3.0-canary.37",
     "payload": "3.0.0-beta.29",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sharp": "0.32.6"
+    "sharp": "^0.33.3"
   },
   "devDependencies": {
     "@types/node": "^20.12.11",
