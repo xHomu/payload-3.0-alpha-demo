@@ -21,8 +21,8 @@ RUN npm install -g pnpm@$PNPM_VERSION
 FROM base as build
 
 # Install packages needed to build node modules
-RUN pnpm update -qq && \
-    pnpm install --no-install-recommends -y build-essential node-gyp pkg-config python-is-python3
+RUN apk update -qq && \
+    apk install --no-install-recommends -y build-essential node-gyp pkg-config python-is-python3
 
 # Install node modules
 COPY --link package.json pnpm-lock.yaml ./
