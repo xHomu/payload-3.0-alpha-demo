@@ -22,7 +22,7 @@ FROM base as build
 
 # Install packages needed to build node modules
 RUN apk update && \
-    apk install build-essential node-gyp pkg-config python-is-python3
+    apk add build-essential node-gyp pkg-config python-is-python3
 
 # Install node modules
 COPY --link package.json pnpm-lock.yaml ./
